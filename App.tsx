@@ -65,13 +65,13 @@ function App(): JSX.Element {
   //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   // };
 
-  const StockButton = ({ stockName,stockIndex }) => {
-    return {
-      <TouchableOpacity style={styles.button}>
-        <Text>{stockName}</Text>
-      </TouchableOpacity>
-    }
-  }
+  // const StockButton = ({ stockName,stockIndex }) => {
+  //   return {
+  //     <TouchableOpacity style={styles.button}>
+  //       <Text>{stockName}</Text>
+  //     </TouchableOpacity>
+  //   }
+  // }
 
   return (
     <SafeAreaView style={styles.container}/* style={backgroundStyle} */>
@@ -83,10 +83,10 @@ function App(): JSX.Element {
         </View>
 
         <View style={styles.footer}>
-          {/* <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}>
             <Text>VIN GROUP</Text>
-          </TouchableOpacity> */}
-          <StockButton stockName={"VIN GROUP"} stockIndex={""}/>
+          </TouchableOpacity>
+          {/* <StockButton stockName={"VIN GROUP"} stockIndex={""}/> */}
           <TouchableOpacity style={styles.button}>
             <Text>FLC</Text>
           </TouchableOpacity>
