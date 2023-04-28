@@ -20,14 +20,19 @@ import {
 class App extends React.Component {
   constructor() {
     super()
+
   }
 
   render() {
     return (
       <SafeAreaView style={styles.container}>
+        <View style={styles.head}>
 
+        </View>
 
+        <View style={styles.body}>
 
+        </View>
       </SafeAreaView>
     );
   }
