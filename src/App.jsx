@@ -26,13 +26,9 @@ class App extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <View style={styles.head}>
 
-        </View>
 
-        <View style={styles.body}>
 
-        </View>
       </SafeAreaView>
     );
   }

@@ -5,7 +5,18 @@ import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 
+//#region User custom
+// import android.os.Bundle;
+//#endregion
+
 public class MainActivity extends ReactActivity {
+
+//#region User custom
+  // @Override
+  // protected void onCreate(Bundle savedInstanceState) {
+  //   super.onCreate(null);
+  // }
+//#endregion
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
