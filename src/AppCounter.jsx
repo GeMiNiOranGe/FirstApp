@@ -1,21 +1,10 @@
 import React from 'react';
 import {
-  Dimensions,
-  Image,
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  TextInput,
-  Touchable,
-  TouchableOpacity,
-  useColorScheme,
   View,
-  Switch,
   TouchableHighlight,
-  Alert,
-  Button,
 } from 'react-native';
 
 const minusSymbol = '−'

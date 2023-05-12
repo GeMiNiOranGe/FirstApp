@@ -74,7 +74,6 @@ function ScreenMovieList({ navigation }) {
         />}
         keyExtractor={item => item.imdbID}
       />
-
     </SafeAreaView>
   )
 }
