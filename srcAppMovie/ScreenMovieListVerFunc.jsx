@@ -2,40 +2,11 @@ import React from 'react'
 import {
   StyleSheet,
   SafeAreaView,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
   FlatList,
-  Image,
-  Alert,
 } from 'react-native'
-import API from '../src/API_AppMovie';
 
-const Item = ({ data, onPressItem }) => (
-  <TouchableOpacity
-    onPress={() => {
-      onPressItem(data)
-    }}
-  >
-    <View style={styles.row}>
-      <View style={{ flex: 3 }}>
-        <Image
-          style={styles.image}
-          source={{ uri: data.Poster }}
-        />
-      </View>
-
-      <View style={{ flex: 10, padding: 10 }}>
-        <Text style={styles.title}>{data.Title} ({data.Year})</Text>
-      </View>
-
-      <View style={{ flex: 1, justifyContent: 'center' }}>
-        <Text style={styles.title}>{'>'}</Text>
-      </View>
-    </View>
-  </TouchableOpacity>
-)
+import API from './API_AppMovie';
+import ItemMovie from './ItemMovie';
 
 function ScreenMovieList({ navigation }) {
   const [textInputValue, setTextInputValue] = React.useState('')
@@ -68,7 +39,7 @@ function ScreenMovieList({ navigation }) {
       <FlatList
         style={styles.flatList}
         data={dataSource}
-        renderItem={({ item }) => <Item
+        renderItem={({ item }) => <ItemMovie
           data={item}
           onPressItem={moveToMovieDetail}
         />}
@@ -86,7 +57,7 @@ const styles = StyleSheet.create({
   },
   flatList: {
     // flex: 1,
-    padding: 10,
+    paddingHorizontal: 10,
     width: '100%',
   },
   row: {

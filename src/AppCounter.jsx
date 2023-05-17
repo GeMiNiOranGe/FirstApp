@@ -206,12 +206,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'lightgray',
   },
-  head: {
-    flex: 1,
-  },
-  body: {
-    flex: 2,
-  },
   title: {
     fontSize: 54,
     color: 'black',

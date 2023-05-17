@@ -13,3 +13,7 @@ npm install @react-navigation/native @react-navigation/native-stack
 npm install react-native-screens react-native-safe-area-context
 ```
 
+3. `LinearGradient` for `ScreenMovieDetail`
+```cmd
+npm i react-native-linear-gradient
+```

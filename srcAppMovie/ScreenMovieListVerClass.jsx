@@ -2,14 +2,11 @@ import React from 'react'
 import {
   StyleSheet,
   SafeAreaView,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
   FlatList,
 } from 'react-native'
-import API from '../src/API_AppMovie';
-import ItemMovie from '../src_component/ItemMovie';
+
+import API from './API_AppMovie';
+import ItemMovie from './ItemMovie';
 
 class ScreenMovieList extends React.Component {
   constructor(props) {
@@ -21,16 +18,12 @@ class ScreenMovieList extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount called');
+    // whether set API in constructor or componentDidUpdate, render function is forced to execute twice
     API.search('Batman').then(data => {
       this.setState({
         dataSource: data
       })
     })
-  }
-
-  componentDidUpdate(){
-    console.log('componentDidUpdate called');
   }
 
   moveToMovieDetail(data) {
@@ -40,7 +33,6 @@ class ScreenMovieList extends React.Component {
   }
 
   render() {
-    console.log('render called');
     return (
       <SafeAreaView style={styles.container}>
         <FlatList
@@ -65,7 +57,7 @@ const styles = StyleSheet.create({
   },
   flatList: {
     // flex: 1,
-    padding: 10,
+    paddingHorizontal: 10,
     width: '100%',
   },
   row: {
@@ -80,18 +72,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'black',
   },
-  // textInput: {
-  //   padding: 10,
-  //   color: 'black',
-  //   borderColor: 'black',
-  //   borderWidth: 2,
-  // },
-  // buttonTitle: {
-  //   color: 'black',
-  // },
-  // button: {
-
-  // },
 })
 
 export default ScreenMovieList
