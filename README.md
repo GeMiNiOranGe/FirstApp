@@ -1,6 +1,6 @@
 Some libraries must be installed
 
-1. `minutes-seconds-milliseconds` for `AppStopWatch`
+1. `minutes-seconds-milliseconds` for [`AppStopWatch`](src/AppStopWatch.jsx)
 ```cmd
 npm install minutes-seconds-milliseconds --save​
 ```
@@ -13,7 +13,7 @@ npm install @react-navigation/native @react-navigation/native-stack
 npm install react-native-screens react-native-safe-area-context
 ```
 
-3. `LinearGradient` for `ScreenMovieDetail`
+3. `LinearGradient` for [`ScreenMovieDetail`](srcAppMovie/ScreenMovieDetail.jsx#L46)
 ```cmd
 npm i react-native-linear-gradient
 ```
