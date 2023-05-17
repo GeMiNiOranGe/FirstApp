@@ -5,7 +5,7 @@
 // 	let rawJSON = JSON.parse(text)
 // 	let data = rawJSON["Global Quote"]
 // 	return {
-// 		stockIndex: data["01. symbol"],
+// 		stockCode: data["01. symbol"],
 // 		stockChange: data["09. change"],
 // 		stockChangePercent: data["10. change percent"],
 // 	}
@@ -22,11 +22,34 @@ export default function(symbol) {
 		.then(function (text) {
 			// let tempJSON =text.replace
 			let rawJSON = JSON.parse(text)
-			let data = rawJSON["Global Quote"]
+			let data = rawJSON['Global Quote']
 			return {
 				stockCode: data["01. symbol"],
-				stockChange: data["02. open"],
+				stockChange: data["09. change"],
 				stockChangePercent: data["10. change percent"],
 			}
 		})
 }
+
+// Version 1.0
+// export default function (symbol) {
+//     let url = `${rootURL}${symbol}`
+//     return fetch(url)
+//         .then(function (response) {
+//             return response.text();
+//         })
+//         .then(function (text) {
+//             let rawJSON = JSON.parse(text);
+
+//             let data = rawJSON['Global Quote'];
+//             let stockCode = data["01. symbol"];
+//             let stockChange = data["09. change"];
+//             let stockChangePercent = data["10. change percent"];
+
+//             return {
+//                 stockCode,
+//                 stockChange,
+//                 stockChangePercent
+//             }
+//         })
+// }
