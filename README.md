@@ -7,10 +7,13 @@ npm install minutes-seconds-milliseconds --save​
 
 2. `React Navigation` to create multiple screens
 ```cmd
-npm install @react-navigation/native @react-navigation/native-stack
+npm install @react-navigation/native
 ```
 ```cmd
 npm install react-native-screens react-native-safe-area-context
+```
+```cmd
+npm install @react-navigation/native-stack
 ```
 
 3. `LinearGradient` for [`ScreenMovieDetail`](srcAppMovie/ScreenMovieDetail.jsx#L46)
