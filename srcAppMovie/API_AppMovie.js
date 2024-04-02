@@ -1,15 +1,14 @@
 let rootURL = 'https://www.omdbapi.com/?apikey=cdf64c68'
 
-exports.search = (s) => {
+export async function search(s) {
 	let url = `${rootURL}&s=${s}`
-	return fetch(url)
-		.then(response => response.json())
-		.then(json => {
-			return json.Search
-		})
+	const response = await fetch(url)
+	const json = await response.json()
+	return json.Search
 }
 
-exports.detail = (id) => {
+export async function detail(id) {
 	let url = `${rootURL}&i=${id}`
-	return fetch(url).then(response => response.json())
+	const response = await fetch(url)
+	return await response.json()
 }
