@@ -1,21 +1,8 @@
 import React from 'react';
 import {
-  Dimensions,
-  Image,
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  TextInput,
-  Touchable,
-  TouchableOpacity,
-  useColorScheme,
-  View,
-  Switch,
-  TouchableHighlight,
-  Alert,
-  Button,
 } from 'react-native';
 
 class App extends React.Component {
@@ -26,9 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-
-
-
+        <Text style={styles.text}>Hello World!!!</Text>
       </SafeAreaView>
     );
   }
@@ -37,12 +22,13 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  head: {
-    // flex: 1,
-  },
-  body: {
-    // flex: 1,
+  text: {
+    color: 'black',
+    fontSize: 40,
   },
 });
 
