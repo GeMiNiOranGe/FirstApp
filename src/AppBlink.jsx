@@ -1,36 +1,30 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Component } from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+} from 'react-native';
 
-class Blink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { showText: true };
+import BlinkText from "./component/BlinkText";
 
-    // Toggle the state every second
-    setInterval(() => {
-      this.setState({ showText: !this.state.showText });
-    }, 1000);
-  }
-
+class App extends Component {
   render() {
-    let display = this.state.showText ? this.props.text : ' ';
     return (
-      <Text>{display}</Text>
+      <SafeAreaView style={styles.container}>
+        <BlinkText text='I love to blink' />
+        <BlinkText text='Yes blinking is so great' />
+        <BlinkText text='Why did they ever take this out of HTML' />
+        <BlinkText text='Look at me look at me look at me' />
+      </SafeAreaView>
     );
   }
 }
 
-class BlinkApp extends Component {
-  render() {
-    return (
-      <View>
-        <Blink text='I love to blink' />
-        <Blink text='Yes blinking is so great' />
-        <Blink text='Why did they ever take this out of HTML' />
-        <Blink text='Look at me look at me look at me' />
-      </View>
-    );
-  }
-}
+export default App;
 
-export default BlinkApp
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
