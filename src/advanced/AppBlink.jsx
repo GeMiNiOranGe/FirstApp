@@ -19,8 +19,6 @@ class App extends Component {
   }
 }
 
-export default App;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -28,3 +26,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+export default App;
