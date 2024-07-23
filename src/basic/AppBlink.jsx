@@ -4,16 +4,16 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import BlinkText from "./component/BlinkText";
+import BlinkText from "../component/BlinkText";
 
 class App extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <BlinkText text='I love to blink' />
-        <BlinkText text='Yes blinking is so great' />
-        <BlinkText text='Why did they ever take this out of HTML' />
-        <BlinkText text='Look at me look at me look at me' />
+        <BlinkText>I love to blink</BlinkText>
+        <BlinkText>Yes blinking is so great</BlinkText>
+        <BlinkText>Why did they ever take this out of HTML</BlinkText>
+        <BlinkText>Look at me look at me look at me</BlinkText>
       </SafeAreaView>
     );
   }

@@ -57,7 +57,9 @@ function App() {
 
       <View style={styles.compare}>
         <Text>{FIRST_NUMBER} is {FIRST_NUMBER > SECOND_NUMBER ? 'greater' : 'less'} than {SECOND_NUMBER}</Text>
-        {[...Array(FIRST_NUMBER)].map((value, index) => <Text>{index + 1}</Text>)}
+        {[...Array(FIRST_NUMBER)].map((value, index) => (
+          <Text>{index + 1}</Text>
+        ))}
       </View>
     </SafeAreaView>
   );

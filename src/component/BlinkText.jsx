@@ -4,22 +4,32 @@ import {
 } from "react-native";
 
 class BlinkText extends Component {
+  #blinkTimeMillisecond = 1000;
+  #interval;
+
   constructor(props) {
     super(props);
-    this.state = { showText: true };
+    this.state = {
+      isShow: true
+    };
+  }
 
-    // Toggle the state every second
-    setInterval(() => {
-      this.setState({ showText: !this.state.showText });
-    }, 1000);
+  componentDidMount() {
+    this.#interval = setInterval(() => {
+      this.setState(prevState => ({
+        isShow: !prevState.isShow,
+      }));
+    }, this.#blinkTimeMillisecond);
+  }
+
+  componentWillUnmount() {
+    if (this.#interval) {
+      clearInterval(this.#interval);
+    }
   }
 
   render() {
-    let display = this.state.showText ? this.props.text : ' ';
-
-    return (
-      <Text>{display}</Text>
-    );
+    return <Text>{this.state.isShow ? this.props.children : ' '}</Text>;
   }
 }
 
