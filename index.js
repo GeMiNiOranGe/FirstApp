@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './src/advanced/AppStopWatch';
+import App from './src/basic/AppCounter';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
