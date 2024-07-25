@@ -18,13 +18,13 @@ import AutoCounter from '../component/AutoCounter';
 
 class App extends React.Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       isShowCounter: true,
-    }
+    };
 
-    this.hideCounterComponent = this.hideCounterComponent.bind(this)
+    this.hideCounterComponent = this.hideCounterComponent.bind(this);
 
     console.log(`${FgGreen}${this.constructor.name}${Reset}: ${FgRed}contructor${Reset} is call`);
   }
@@ -32,7 +32,7 @@ class App extends React.Component {
   hideCounterComponent() {
     this.setState({
       isShowCounter: !this.state.isShowCounter,
-    })
+    });
   }
 
   componentDidMount() {
@@ -40,31 +40,24 @@ class App extends React.Component {
   }
 
   render() {
-    const hideOrShowText = !this.state.isShowCounter ? 'Show' : 'Hide'
+    const hideOrShowText = !this.state.isShowCounter ? 'Show' : 'Hide';
 
     console.log(`${FgGreen}${this.constructor.name}${Reset}: ${FgYellow}${this.render.name}${Reset} is called`);
 
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.title}>
-          Counter app
-        </Text>
-        <Text style={styles.subtitle}>
-          An example for component lifecycle
-        </Text>
+        <Text style={styles.title}>Counter app</Text>
+        <Text style={styles.subtitle}>An example for component lifecycle</Text>
 
         <Counter />
         
         <Text style={styles.title}>Auto counter</Text>
-        {/* shorthand cho câu lệnh if */}
         {this.state.isShowCounter && <AutoCounter />}
 
         <Text
           style={styles.text}
           onPress={this.hideCounterComponent}
-        >
-          {hideOrShowText}
-        </Text>
+        >{hideOrShowText}</Text>
       </SafeAreaView>
     );
   }
