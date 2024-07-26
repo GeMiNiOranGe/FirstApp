@@ -9,7 +9,7 @@ import {
   Dimensions,
 } from 'react-native'
 import LinearGradient from "react-native-linear-gradient";
-import API from "./API_AppMovie";
+import * as API from "../../data/ApiMovie";
 
 const textColor = 'white'
 
@@ -34,13 +34,11 @@ class ScreenMovieDetail extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Image
+        {!this.state.Poster ? null : <Image
           style={styles.backgroundImage}
           blurRadius={6}
-          source={{
-            uri: this.state.Poster
-          }}
-        />
+          source={{ uri: this.state.Poster }}
+        />}
 
         <ScrollView style={[styles.mainScreen, styles.absolute]}>
           <LinearGradient
@@ -62,11 +60,10 @@ class ScreenMovieDetail extends React.Component {
 
             <View style={[styles.movieInfo, styles.absolute]}>
               <View style={{ flex: 1 }}>
-                <Image
+                {!this.state.Poster ? null : <Image
                   style={styles.image}
-                  source={{
-                    uri: this.state.Poster
-                  }} />
+                  source={{ uri: this.state.Poster }}
+                />}
                 <Text style={styles.subTitle}>Meta: {this.state.Metascore}</Text>
                 <Text style={styles.subTitle}>imDB: {this.state.imdbRating}</Text>
               </View>

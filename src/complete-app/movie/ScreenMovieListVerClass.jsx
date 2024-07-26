@@ -5,7 +5,7 @@ import {
   FlatList,
 } from 'react-native'
 
-import API from './API_AppMovie';
+import * as API from '../../data/ApiMovie';
 import ItemMovie from './ItemMovie';
 
 class ScreenMovieList extends React.Component {

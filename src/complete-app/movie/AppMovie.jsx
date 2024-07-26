@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import ScreenMovieList from './ScreenMovieListVerFunc';
+import ScreenMovieList from './ScreenMovieListVerClass';
 import ScreenMovieDetail from './ScreenMovieDetail';
 
 const Stack = createNativeStackNavigator()

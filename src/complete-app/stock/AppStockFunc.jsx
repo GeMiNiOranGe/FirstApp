@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import API from './API_Stock';
+import API from '../../data/ApiStock';
 import StockButton from './StockButton';
 
 function App() {
