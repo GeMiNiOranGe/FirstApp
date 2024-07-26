@@ -1,64 +1,59 @@
-// Import liraries
-import React from 'react'
+import React from 'react';
 import {
   StyleSheet,
   View,
   Text,
   Image,
-} from 'react-native'
+} from 'react-native';
 
-// Create a component
 class CourseItem extends React.Component {
   render() {
     return (
       <View style={styles.course}>
         <Image
-          style={styles.courseImage}
-          source={{
-            uri: this.props.imageUri
-          }}
+          style={styles.image}
+          source={{ uri: this.props.imageUri }}
         />
 
-        <View style={styles.courseInformation}>
-          <Text style={styles.courseName}>{this.props.name}</Text>
+        <View style={styles.information}>
+          <Text style={styles.name}>{this.props.name}</Text>
+
           <Text
-            style={styles.courseSummary}
+            style={styles.summary}
             numberOfLines={2}
           >
             {this.props.summary}
           </Text>
         </View>
       </View>
-    )
+    );
   }
 }
 
-// Define styles
 const styles = StyleSheet.create({
   course: {
     flexDirection: 'row',
     marginBottom: 5,
     alignItems: 'center',
   },
-  courseImage: {
+  image: {
     height: 100,
     width: 100,
     borderRadius: 8,
   },
-  courseInformation: {
+  information: {
     marginLeft: 10,
     // make the text don't out of the screen
     flexShrink: 1,
   },
-  courseName: {
+  name: {
     fontSize: 22,
     color: 'white',
     marginBottom: 4,
   },
-  courseSummary: {
+  summary: {
     color: 'darkgray',
   },
-})
+});
 
-// Make this component available to the app
-export default CourseItem
+export default CourseItem;
