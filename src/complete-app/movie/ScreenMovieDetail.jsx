@@ -9,21 +9,19 @@ import {
   Dimensions,
 } from 'react-native'
 import LinearGradient from "react-native-linear-gradient";
+
 import * as API from "../../data/ApiMovie";
+import Seperator from "../../component/Seperator.jsx";
 
 const textColor = 'white'
-
-class Seperator extends React.Component {
-  render() {
-    return <View style={{ height: 1, backgroundColor: 'white', marginVertical: 5, }} />
-  }
-}
 
 class ScreenMovieDetail extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
+  }
 
+  componentDidMount() {
     const imdbID = this.props.route.params.imdbID;
 
     API.detail(imdbID).then(data => {
